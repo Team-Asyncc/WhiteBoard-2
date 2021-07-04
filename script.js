@@ -8,6 +8,8 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 let draw_color = "black";
 let draw_width = "10";
 let is_drawing = false;
+let is_shape = false;
+let canvasArea = document.querySelector(".canvasArea");
 
 let arr = [];
 let index = -1;
@@ -54,6 +56,7 @@ const pen = document.querySelector(".pen");
 const dropdown = document.querySelector(".color");
 pen.addEventListener("click", penfunc);
 function penfunc(e) {
+  is_shape = false;
   draw_width = "5";
   draw_color = "black";
   dropdown.classList.toggle("color1");
@@ -97,9 +100,25 @@ function clear() {
   index = -1;
 }
 const eraser = document.querySelector(".eraser");
-eraser.addEventListener("click", function () {
+const size = document.querySelector(".size");
+eraser.addEventListener("click", function (e) {
+  size.classList.toggle("size1");
   draw_width = "15";
   draw_color = "white";
+});
+size.addEventListener("click", function (e) {
+  if (e.target.id === "s5") {
+    draw_width = "10";
+  }
+  if (e.target.id === "s6") {
+    draw_width = "15";
+  }
+  if (e.target.id === "s7") {
+    draw_width = "20";
+  }
+  if (e.target.id === "s8") {
+    draw_width = "50";
+  }
 });
 const undo = document.querySelector(".undo");
 undo.addEventListener("click", function () {
@@ -110,8 +129,35 @@ undo.addEventListener("click", function () {
   arr.pop();
   ctx.putImageData(arr[index], 0, 0);
 });
-//pen
-//eraser
-// backgroud
-// shape
-// undo
+const shape = document.querySelector(".shape");
+const dropdown_shape = document.querySelector(".shapes");
+shape.addEventListener("click", function () {
+  dropdown_shape.classList.toggle("shapes1");
+});
+let drawShape = "";
+
+dropdown_shape.addEventListener("click", function (e) {
+  drawShape = e.target.id;
+  is_shape = true;
+  is_drawing = false;
+  canvasArea.addEventListener("click", addEvent);
+});
+function addEvent(e) {
+  console.log(is_shape);
+  if (is_shape === false) return;
+  let x = e.clientX - canvas.offsetLeft;
+  let y = e.clientY - canvas.offsetTop;
+  if (drawShape === "s9") {
+    ctx.beginPath();
+    ctx.arc(x, y, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+  } else if (drawShape === "s10") {
+    ctx.beginPath();
+    ctx.rect(x, y, 150, 100);
+    ctx.stroke();
+  } else if (drawShape === "s11") {
+    ctx.beginPath();
+    ctx.rect(x, y, 150, 150);
+    ctx.stroke();
+  }
+}

@@ -13,7 +13,7 @@
 }
 #canvas {
   /* height: 100vh;
-    width: 100vw; */
+  width: 100vw; */
   background-color: #ffffff;
   background: transparent;
   border: 2px solid #dadce0;
@@ -28,8 +28,8 @@
   position: absolute;
   /* display: inline-block; */
   /* display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; */
+  flex-direction: column;
+  justify-content: space-evenly; */
   border-radius: 50px;
   left: 1em;
   background-color: #ffffff;
@@ -57,4 +57,42 @@
 .space {
   margin-top: 200%;
   cursor: pointer;
+}
+.size {
+  display: none;
+}
+.size1 {
+  display: block;
+  width: 400%;
+  height: 10%;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  left: 3em;
+  box-shadow: 12px 2px 20px -1px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  background-color: #ffffff;
+}
+.size > p {
+  margin: 6%;
+}
+.shapes {
+  display: none;
+}
+.shapes1 {
+  display: block;
+  width: 400%;
+  height: 10%;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  left: 3em;
+  box-shadow: 12px 2px 20px -1px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  background-color: #ffffff;
+}
+.shapes > p {
+  margin: 6%;
 }
