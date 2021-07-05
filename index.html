@@ -5,83 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css"
+      rel="stylesheet"
+    />
     <title>White Board</title>
-  </head>   
-    <body class="light-theme">
-  <header>
-    <nav>
-      
-      <ul>
-        <li>
-          <div class="left-side">
-          <img
-            src="./Copy of Untitled (1).png"
-            height="52px"
-            width="140px"
-          />
-        </div>
-        </li>
-        <li>
-          <label class="switch"> 
-            <i class="fas fa-adjust"></i>
-            <div>
-              <input type="checkbox" />
-              <span class="slider round"></span>
+  </head>
+  <body class="light-theme">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <div class="left-side">
+              <img
+                src="./Copy of Untitled (1).png"
+                height="52px"
+                width="140px"
+              />
             </div>
-          </label>
-        </li>      
-        <li>About us</li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <!-- Change My Theme -->
+          </li>
+          <li>
+            <label class="switch">
+              <i class="fas fa-adjust"></i>
+              <div>
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </div>
+            </label>
+          </li>
+          <li>About us</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Change My Theme -->
 
-<!--  -->
-    <div class="container">
-      <div class="vartbar">
-        <div class="space">
-          <span class="pen">Pen</span>
-        </div>
-        <div class="color">
-          <p id="s1">s1</p>
-          <p id="s2">s2</p>
-          <p id="s3">s3</p>
-          <p id="s4">s4</p>
+      <!--  -->
+      <div class="container">
+        <div class="vartbar">
+          <div class="space" id="fis">
+            <span class="pen"><i class="fas fa-pen" id="pencil"></i></span>
+          </div>
+          <div class="color">
+            <p>
+              <i class="far fa-circle" id="s1"></i>
+            </p>
+            <p><i class="far fa-circle" id="s2" style="font-size: 20px"></i></p>
+            <p><i class="far fa-circle" id="s3" style="font-size: 25px"></i></p>
+            <p><i class="far fa-circle" id="s4" style="font-size: 30px"></i></p>
 
-          <p id="c1">c1</p>
-          <p id="c2">c2</p>
-          <p id="c3">c3</p>
-          <p id="c4">c4</p>
+            <p id="c1">
+              <i class="fas fa-circle" id="yellow" style="font-size: 25px"></i>
+            </p>
+            <p id="c2">
+              <i class="fas fa-circle" id="red" style="font-size: 25px"></i>
+            </p>
+            <p id="c3">
+              <i class="fas fa-circle" id="blue" style="font-size: 25px"></i>
+            </p>
+            <p id="c4">
+              <i class="fas fa-circle" id="green" style="font-size: 25px"></i>
+            </p>
+          </div>
+          <div class="space">
+            <span class="eraser"><i class="fas fa-eraser"></i></span>
+          </div>
+          <div class="size">
+            <p id="s5"><i class="far fa-circle"></i></p>
+            <p id="s6"><i class="far fa-circle" style="font-size: 20px"></i></p>
+            <p id="s7"><i class="far fa-circle" style="font-size: 25px"></i></p>
+            <p id="s8"><i class="far fa-circle" style="font-size: 30px"></i></p>
+          </div>
+          <div class="space">
+            <span class="select"
+              ><img
+                src="https://img.icons8.com/material-rounded/40/000000/delete-sign.png"
+            /></span>
+          </div>
+          <div class="space">
+            <span class="undo"
+              ><img src="https://img.icons8.com/ios-glyphs/30/000000/undo.png"
+            /></span>
+          </div>
+          <div class="space">
+            <span class="shape"
+              ><i class="fas fa-shapes" style="font-size: 22px"></i
+            ></span>
+          </div>
+          <div class="shapes">
+            <p><i class="far fa-circle" id="s9" style="font-size: 25px"></i></p>
+            <p>
+              <i
+                class="fal fa-rectangle-landscape"
+                id="s10"
+                style="font-size: 25px"
+              ></i>
+            </p>
+            <p>
+              <i class="far fa-square" id="s11" style="font-size: 25px"></i>
+            </p>
+          </div>
         </div>
-        <div class="space">
-          <span class="eraser">eras</span>
-        </div>
-        <div class="size">
-          <p id="s5">s1</p>
-          <p id="s6">s2</p>
-          <p id="s7">s3</p>
-          <p id="s8">s4</p>
-        </div>
-        <div class="space">
-          <span class="select">sel</span>
-        </div>
-        <div class="space">
-          <span class="undo">undo</span>
-        </div>
-        <div class="space">
-          <span class="shape">shap</span>
-        </div>
-        <div class="shapes">
-          <p id="s9">cir</p>
-          <p id="s10">rec</p>
-          <p id="s11">sq</p>
+        <div class="canvasArea">
+          <canvas id="canvas"></canvas>
         </div>
       </div>
-      <div class="canvasArea">
-        <canvas id="canvas"></canvas>
-      </div>
-    </div>
     </main>
     <script src="script.js"></script>
   </body>

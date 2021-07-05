@@ -10,6 +10,8 @@ let draw_width = "10";
 let is_drawing = false;
 let is_shape = false;
 let canvasArea = document.querySelector(".canvasArea");
+const clears = document.querySelector(".select");
+clears.addEventListener("click", clear);
 
 let arr = [];
 let index = -1;
@@ -59,7 +61,14 @@ function penfunc(e) {
   is_shape = false;
   draw_width = "5";
   draw_color = "black";
+  console.log(pen.parentElement);
+  pen.parentElement.classList.add("btn-click");
+  eraser.parentElement.classList.remove("btn-click");
+  shape.parentElement.classList.remove("btn-click");
+  dropdown_shape.classList.remove("shapes1");
+  size.classList.remove("size1");
   dropdown.classList.toggle("color1");
+  pen.parentElement.style.backgroundColor = "black";
 }
 console.log(dropdown);
 dropdown.addEventListener("click", dropdownfunc);
@@ -78,17 +87,21 @@ function dropdownfunc(e) {
   if (e.target.id === "s4") {
     draw_width = "20";
   }
-  if (e.target.id === "c1") {
+  if (e.target.id === "yellow") {
     draw_color = "orange";
+    pen.parentElement.style.backgroundColor = "orange";
   }
-  if (e.target.id === "c2") {
+  if (e.target.id === "red") {
     draw_color = "red";
+    pen.parentElement.style.backgroundColor = "red";
   }
-  if (e.target.id === "c3") {
+  if (e.target.id === "blue") {
     draw_color = "blue";
+    pen.parentElement.style.backgroundColor = "blue";
   }
-  if (e.target.id === "c4") {
+  if (e.target.id === "green") {
     draw_color = "green";
+    pen.parentElement.style.backgroundColor = "green";
   }
 }
 function clear() {
@@ -102,7 +115,13 @@ function clear() {
 const eraser = document.querySelector(".eraser");
 const size = document.querySelector(".size");
 eraser.addEventListener("click", function (e) {
+  eraser.parentElement.classList.add("btn-click");
+  pen.parentElement.classList.remove("btn-click");
+  shape.parentElement.classList.remove("btn-click");
+  dropdown.classList.remove("color1");
+  dropdown_shape.classList.remove("shapes1");
   size.classList.toggle("size1");
+  pen.parentElement.style.backgroundColor = "white";
   draw_width = "15";
   draw_color = "white";
 });
@@ -122,6 +141,13 @@ size.addEventListener("click", function (e) {
 });
 const undo = document.querySelector(".undo");
 undo.addEventListener("click", function () {
+  dropdown.classList.remove("color1");
+  dropdown_shape.classList.remove("shapes1");
+  pen.parentElement.classList.remove("btn-click");
+  eraser.parentElement.classList.remove("btn-click");
+  shape.parentElement.classList.remove("btn-click");
+  size.classList.remove("size1");
+  pen.parentElement.style.backgroundColor = "white";
   if (index <= 0) {
     clear();
   }
@@ -132,7 +158,13 @@ undo.addEventListener("click", function () {
 const shape = document.querySelector(".shape");
 const dropdown_shape = document.querySelector(".shapes");
 shape.addEventListener("click", function () {
+  shape.parentElement.classList.add("btn-click");
+  pen.parentElement.classList.remove("btn-click");
+  eraser.parentElement.classList.remove("btn-click");
   dropdown_shape.classList.toggle("shapes1");
+  dropdown.classList.remove("color1");
+  size.classList.remove("size1");
+  pen.parentElement.style.backgroundColor = "white";
 });
 let drawShape = "";
 
@@ -161,6 +193,11 @@ function addEvent(e) {
     ctx.stroke();
   }
 }
+canvasArea.addEventListener("click", function () {
+  dropdown.classList.remove("color1");
+  dropdown_shape.classList.remove("shapes1");
+  size.classList.remove("size1");
+});
 
 const themeSwitch = document.querySelector("input");
 
