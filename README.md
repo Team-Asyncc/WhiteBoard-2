@@ -25,10 +25,11 @@ It is a web based drawing application made using Canvas and the functionalities 
 ## Screenshots
 
 ### Dark Theme
-![darkTheme](https://user-images.githubusercontent.com/35297934/124461562-6a283500-ddae-11eb-9876-27771c7f0ebc.png)
+![darktheme](https://user-images.githubusercontent.com/35297934/124463855-179c4800-ddb1-11eb-9c70-cbbdcaf5cbc5.png)
 
 ### Light Theme
-![LightTheme](https://user-images.githubusercontent.com/35297934/124461585-70b6ac80-ddae-11eb-8ad6-6ffc4ee67d16.png)
+![lighttheme](https://user-images.githubusercontent.com/35297934/124463848-15d28480-ddb1-11eb-81f6-b893b25d5d6f.png)
+
 
 ## contributors
 
