@@ -199,6 +199,18 @@ canvasArea.addEventListener("click", function () {
   size.classList.remove("size1");
 });
 
+// Download Image
+const downloadBtn = document.querySelector(".downbtn");
+downloadBtn.addEventListener("click", function () {
+  // tool.globalCompositeOperation = "hue";
+  let link = canvas.toDataURL();
+  let anchor = document.createElement("a");
+  anchor.href = link;
+  anchor.download = "file.png";
+  anchor.click();
+  anchor.remove();
+});
+
 // Theme
 document.addEventListener("DOMContentLoaded", function (event) {
   document.documentElement.setAttribute("data-theme", "dark");

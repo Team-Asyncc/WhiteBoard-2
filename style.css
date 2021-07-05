@@ -118,7 +118,7 @@ main {
 }
 
 .vartbar {
-  height: 65vh;
+  height: 70vh;
   width: 8vh;
   text-align: center;
   padding: 10px;
@@ -179,8 +179,7 @@ main {
 .size1 {
   display: block;
   width: 400%;
-  height: 10%;
-  top: 1;
+  height: fit-content;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -189,6 +188,7 @@ main {
   box-shadow: 12px 2px 20px -1px rgba(0, 0, 0, 0.75);
   position: absolute;
   background-color: #ffffff;
+  bottom: 280px;
 }
 .size > p {
   margin: 6%;
@@ -199,13 +199,13 @@ main {
 .shapes1 {
   display: block;
   width: 200%;
-  height: 10%;
-  bottom: 0;
+  height: fit-content;
+  bottom: 5px;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
-  left: 3em;
+  left: 3.2em;
   box-shadow: 12px 2px 10px 1px rgba(0, 0, 0, 0.75);
   position: absolute;
   background-color: #ffffff;
@@ -230,7 +230,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-[data-theme='dark'] {
+[data-theme="dark"] {
   filter: invert(100%);
 }
 

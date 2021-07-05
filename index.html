@@ -27,22 +27,24 @@
         color: white;
         background-color: #242b2e;
         display: none;
-        width: 80px;
+        width: 105px;
+        left: 0px;
         height: fit-content;
         border-radius: 10px;
         padding: 3px;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
       }
 
       .pen:hover + .text,
       .eraser:hover + .text,
       .select:hover + .text,
       .undo:hover + .text,
-      .shape:hover + .text {
+      .shape:hover + .text,
+      .downbtn:hover + .text {
         display: block;
         color: white;
         font-size: 22px;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
       }
     </style>
   </head>
@@ -59,7 +61,7 @@
           <li>
             <a
               href="https://github.com/Team-Asyncc"
-              style="font-family: 'Roboto', sans-serif;"
+              style="font-family: 'Roboto', sans-serif"
             >
               Made by Async Team 🚀
             </a>
@@ -82,26 +84,26 @@
               <i class="far fa-circle" id="s1"></i>
             </p>
             <p>
-              <i class="far fa-circle" id="s2" style="font-size: 20px;"></i>
+              <i class="far fa-circle" id="s2" style="font-size: 20px"></i>
             </p>
             <p>
-              <i class="far fa-circle" id="s3" style="font-size: 25px;"></i>
+              <i class="far fa-circle" id="s3" style="font-size: 25px"></i>
             </p>
             <p>
-              <i class="far fa-circle" id="s4" style="font-size: 30px;"></i>
+              <i class="far fa-circle" id="s4" style="font-size: 30px"></i>
             </p>
 
             <p id="c1">
-              <i class="fas fa-circle" id="yellow" style="font-size: 25px;"></i>
+              <i class="fas fa-circle" id="yellow" style="font-size: 25px"></i>
             </p>
             <p id="c2">
-              <i class="fas fa-circle" id="red" style="font-size: 25px;"></i>
+              <i class="fas fa-circle" id="red" style="font-size: 25px"></i>
             </p>
             <p id="c3">
-              <i class="fas fa-circle" id="blue" style="font-size: 25px;"></i>
+              <i class="fas fa-circle" id="blue" style="font-size: 25px"></i>
             </p>
             <p id="c4">
-              <i class="fas fa-circle" id="green" style="font-size: 25px;"></i>
+              <i class="fas fa-circle" id="green" style="font-size: 25px"></i>
             </p>
           </div>
 
@@ -117,18 +119,20 @@
           <div class="size">
             <p><i class="far fa-circle" id="s5"></i></p>
             <p>
-              <i class="far fa-circle" style="font-size: 20px;" id="s6"></i>
+              <i class="far fa-circle" style="font-size: 20px" id="s6"></i>
             </p>
             <p>
-              <i class="far fa-circle" style="font-size: 25px;" id="s7"></i>
+              <i class="far fa-circle" style="font-size: 25px" id="s7"></i>
             </p>
             <p>
-              <i class="far fa-circle" style="font-size: 30px;" id="s8"></i>
+              <i class="far fa-circle" style="font-size: 30px" id="s8"></i>
             </p>
           </div>
 
           <div class="space">
-            <span class="eraser"><i class="fas fa-eraser"></i></span>
+            <span class="eraser"
+              ><i class="fas fa-eraser" style="font-size: 25px"></i
+            ></span>
             <div class="text">Eraser</div>
           </div>
 
@@ -138,25 +142,33 @@
             </span>
             <div class="text">Undo</div>
           </div>
+
+          <div class="space">
+            <span class="downbtn"
+              ><i class="far fa-file-download" style="font-size: 25px"></i
+            ></span>
+            <div class="text">Download</div>
+          </div>
+
           <div class="space">
             <span class="shape">
-              <i class="fas fa-shapes" style="font-size: 22px;"></i>
+              <i class="fas fa-shapes" style="font-size: 22px"></i>
             </span>
             <div class="text">Shapes</div>
           </div>
           <div class="shapes">
             <p>
-              <i class="far fa-circle" id="s9" style="font-size: 25px;"></i>
+              <i class="far fa-circle" id="s9" style="font-size: 25px"></i>
             </p>
             <p>
               <i
                 class="fal fa-rectangle-landscape"
                 id="s10"
-                style="font-size: 25px;"
+                style="font-size: 25px"
               ></i>
             </p>
             <p>
-              <i class="far fa-square" id="s11" style="font-size: 25px;"></i>
+              <i class="far fa-square" id="s11" style="font-size: 25px"></i>
             </p>
           </div>
         </div>
