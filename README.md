@@ -2,7 +2,7 @@
 
 ##   [Paint Here](https://team-asyncc.github.io/WhiteBoard-2/)
 
-##   [Demo Video](https://drive.google.com/file/d/16diqSo2usLMthyCdNFdKfHGhvRB_5VON/view)
+##   [Demo Video](https://drive.google.com/file/d/1k8h6TnkA_QlWHqcpBPHB3zV_qwBhDdgk/view?usp=sharing)
 
 
 # ASYNC WHITEBOARD 🖌️ 
@@ -24,6 +24,11 @@ It is a web based drawing application made using Canvas and the functionalities 
 
 ## Screenshots
 
+### Dark Theme
+![darkTheme](https://user-images.githubusercontent.com/35297934/124461562-6a283500-ddae-11eb-9876-27771c7f0ebc.png)
+
+### Light Theme
+![LightTheme](https://user-images.githubusercontent.com/35297934/124461585-70b6ac80-ddae-11eb-8ad6-6ffc4ee67d16.png)
 
 ## contributors
 
