@@ -27,6 +27,7 @@ It is a web based drawing application made using Canvas and the functionalities 
 
 ## contributors
 
+- [@Swaijot](https://github.com/swag1223)
 - [@Rachit Gupta](https://github.com/Rachit-3850)
 - [@Ayush-pandey](https://github.com/ayush-pandey007)
 - [@haider000](https://github.com/haider000)
