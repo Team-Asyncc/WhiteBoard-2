@@ -199,8 +199,29 @@ canvasArea.addEventListener("click", function () {
   size.classList.remove("size1");
 });
 
-const themeSwitch = document.querySelector("input");
+// Theme
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.documentElement.setAttribute("data-theme", "dark");
+});
 
-themeSwitch.addEventListener("change", () => {
-  document.body.classList.toggle("dark-theme");
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.documentElement.setAttribute("data-theme", "light");
+
+  // Get our button switcher
+  var themeSwitcher = document.getElementById("theme-switcher");
+
+  // When our button gets clicked
+  themeSwitcher.onclick = function () {
+    // on the first run
+    // it should be `light`
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var themeName = document.getElementById("theme-switcher").innerHTML;
+
+    // Switch between `dark` and `light`
+    var switchToTheme = currentTheme === "dark" ? "light" : "dark";
+    var switchThemeName = themeName === "DARK" ? "LIGHT" : "DARK";
+    document.getElementById("theme-switcher").innerHTML = switchThemeName;
+    // Set our current theme to the new one
+    document.documentElement.setAttribute("data-theme", switchToTheme);
+  };
 });
