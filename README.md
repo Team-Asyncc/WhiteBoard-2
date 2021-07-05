@@ -1,6 +1,6 @@
 # Check out the White-Board at :  
 
-##   [Paint Here](https://signifershrey.github.io/Brick-Breaker/)
+##   [Paint Here](https://team-asyncc.github.io/WhiteBoard-2/)
 
 ##   [Demo Video](https://drive.google.com/file/d/16diqSo2usLMthyCdNFdKfHGhvRB_5VON/view)
 
